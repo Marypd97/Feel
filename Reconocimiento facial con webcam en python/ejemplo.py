@@ -19,13 +19,13 @@ while(True):
 
     #Dibujamos un rectangulo en las coordenadas de cada rostro
     for (x,y,w,h) in faces:
-        cv2.rectangle(img,(x,y),(x+w,y+h),(125,255,0),2)
+        cv2.rectangle(gray,(x,y),(x+w,y+h),(125,255,0),2)
+        #cv2.circle(gray,(x,y),(x+w,y+h),(125,255,0),2)
 
     #Mostramos la imagen
-    cv2.imshow('img',img)
+    cv2.imshow('img',gray)
 
     #con la tecla 'q' salimos del programa
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
-cv2-destroyAllWindows()
